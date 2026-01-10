@@ -1,6 +1,235 @@
-/******* Change Box Model ***************/
+/* =========================
+   CSS RESET / BASE STYLES
+   ========================= */
+
 *,
-*:before,
-*:after {
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  color: #111;
+  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* =========================
+   HEADER
+   ========================= */
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 3px solid #333;
+}
+
+#top-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+#top-header a {
+  text-decoration: none;
+  color: #000;
+}
+
+#tools a {
+  font-size: 0.9rem;
+}
+
+/* =========================
+   NAVIGATION
+   ========================= */
+
+nav {
+  background-color: #222;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav li {
+  margin: 0;
+}
+
+nav a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: #444;
+}
+
+/* =========================
+   MAIN LAYOUT
+   ========================= */
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* =========================
+   HERO SECTION
+   ========================= */
+
+.hero h2 {
+  margin-top: 0;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.hero-text h3 {
+  margin-top: 0;
+}
+
+.hero-text ul {
+  padding-left: 1.2rem;
+}
+
+.hero-text li {
+  margin-bottom: 0.25rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 0.75rem;
+  padding: 0.5rem 1rem;
+  background-color: #00a0c6;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+}
+
+.btn:hover,
+.btn:focus {
+  background-color: #007c99;
+}
+
+/* =========================
+   MAIN CONTENT (UPGRADES + REVIEWS)
+   ========================= */
+
+.main-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ---- Upgrades ---- */
+
+.upgrades h3 {
+  margin-top: 0;
+}
+
+.upgrade-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.upgrade-item {
+  text-align: center;
+}
+
+.upgrade-item img {
+  background-color: #00a0c6;
+  padding: 0.5rem;
+}
+
+.upgrade-item a {
+  display: block;
+  margin-top: 0.5rem;
+  color: #004b8d;
+  text-decoration: underline;
+  font-size: 0.9rem;
+}
+
+/* ---- Reviews ---- */
+
+.reviews h3 {
+  margin-top: 0;
+}
+
+.reviews ul {
+  padding-left: 1.2rem;
+}
+
+.reviews li {
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 2px solid #333;
+  font-size: 0.85rem;
+}
+
+/* =========================
+   MEDIA QUERY (DESKTOP)
+   ========================= */
+
+@media (min-width: 768px) {
+  .hero-content {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .hero-text {
+    flex: 1;
+  }
+
+  .hero-image {
+    flex: 1;
+  }
+
+  .main-content {
+    flex-direction: row;
+  }
+
+  .upgrades,
+  .reviews {
+    flex: 1;
+  }
+
+  nav ul {
+    justify-content: flex-start;
+  }
+
+  nav li {
+    margin-right: 1rem;
+  }
 }
