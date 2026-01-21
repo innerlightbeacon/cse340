@@ -1,0 +1,21 @@
+<%- include('../partials/head') %>
+<%- include('../partials/header') %>
+<%- include('../partials/navigation') %>
+
+<main class="error-page">
+  <h1><%= title %></h1>
+
+  <p class="error-message">
+    <%- message %>
+  </p>
+
+  <p class="error-humor">
+    🚧 Looks like this page took a wrong turn at Albuquerque.
+  </p>
+
+  <p>
+    <a href="/" class="btn">Return Home</a>
+  </p>
+</main>
+
+<%- include('../partials/footer') %>
