@@ -237,3 +237,47 @@ footer {
     margin-right: 1rem;
   }
 }
+
+
+/* =========================
+   INVENTORY DETAIL VIEW
+   ========================= */
+
+.inv-detail {
+  display: flex;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.inv-image {
+  flex: 1;
+}
+
+.inv-image img {
+  width: 100%;
+  height: auto;
+}
+
+.inv-info {
+  flex: 1;
+}
+
+.inv-info h2 {
+  margin-top: 0;
+  font-size: 1.4rem;
+}
+
+.inv-info p {
+  margin-bottom: 0.75rem;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   INVENTORY DETAIL (MOBILE)
+   ========================= */
+
+@media (max-width: 768px) {
+  .inv-detail {
+    flex-direction: column;
+  }
+}
