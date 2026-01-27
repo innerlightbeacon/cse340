@@ -1,16 +1,16 @@
 const pool = require("../database/")
 
 /* ***************************
- *  Get all classification data
+ * Get all classification data
  * ************************** */
-async function getClassifications(){
+async function getClassifications() {
   return await pool.query(
     "SELECT * FROM public.classification ORDER BY classification_name"
   )
 }
 
 /* ***************************
- *  Get all inventory items and classification_name by classification_id
+ * Get inventory items by classification id
  * ************************** */
 async function getInventoryByClassificationId(classification_id) {
   try {
@@ -23,12 +23,12 @@ async function getInventoryByClassificationId(classification_id) {
     )
     return data.rows
   } catch (error) {
-    console.error("getInventoryByClassificationId error " + error)
+    throw new Error("Database error retrieving inventory by classification")
   }
 }
 
 /* ***************************
- *  Get inventory item by inventory id
+ * Get inventory item by inventory id
  * ************************** */
 async function getInventoryById(inv_id) {
   try {
@@ -39,7 +39,7 @@ async function getInventoryById(inv_id) {
     )
     return data.rows[0]
   } catch (error) {
-    console.error("getInventoryById error " + error)
+    throw new Error("Database error retrieving inventory item")
   }
 }
 
