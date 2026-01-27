@@ -34,7 +34,8 @@ app.use(static)
 app.get("/", utilities.handleErrors(baseController.buildHome))
 
 // Inventory routes
-app.use("/inventory", inventoryRoute)
+app.use("/inv", inventoryRoute)
+
 
 // 404 Route (must be after all other routes)
 app.use((req, res, next) => {
